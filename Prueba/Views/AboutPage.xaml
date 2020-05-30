@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Prueba.Views.AboutPage"
+             xmlns:vm="clr-namespace:Prueba.ViewModels"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Padding="20" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">                         
+                <Label Text="Creado por:" FontSize="Title"></Label>
+                <Label Text="    Pablo Cabrera" FontSize="Subtitle"></Label>
+                <Label Text="Facha" FontSize="Title"></Label>
+                <Label Text="    Mayo 2020" FontSize="Subtitle"></Label>
+                <Label Text="Descripción" FontSize="Title"></Label>
+                <Label Text="    Prueba de Xamarin" FontSize="Subtitle"></Label>
+                <Label Text="Información de contacto:" FontSize="Title"></Label>
+                <Label Text="    Phone: 5559974543" FontSize="Subtitle"></Label>
+                <Label Text="    Mail: pablos_cabrera23@hotmail.com" FontSize="Subtitle"></Label>
+                
+                <Label Text="Gracias!" FontSize="Title" HorizontalOptions="Center" VerticalOptions="EndAndExpand"></Label>
+        </StackLayout>    
+    </Grid>
+    
+</ContentPage>

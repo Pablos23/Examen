@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:views="clr-namespace:Prueba.Views"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="{StaticResource PrimaryColor}"
+            SelectedTabColor="White"
+            UnselectedTabColor="White"
+            x:Class="Prueba.Views.MainPage">
+
+    <TabbedPage.Children>
+        <NavigationPage Title="Usuarios" IconImageSource="ic_account">           
+            <x:Arguments>
+                <views:ItemsPage />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Acerca de"  IconImageSource="ic_alert">            
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+    
+</TabbedPage>

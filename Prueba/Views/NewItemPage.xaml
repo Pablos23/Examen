@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              xmlns:behaviors="clr-namespace:Prueba.Behaviors"
+              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Prueba.Views.NewItemPage"
+             Title="Nuevo usuario">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancelar" Command="{Binding CancelCommand}" />
+        <ToolbarItem Text="Guardar" Command="{Binding SaveCommand}" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Nombre*" FontSize="Medium" />
+            <Entry Text="{Binding Item.Name}" FontSize="Small" />
+            <Label Text="Apellido*" FontSize="Medium" />
+            <Entry Text="{Binding Item.LastName}" FontSize="Small" />
+            <Label Text="Email*" FontSize="Medium" />
+            <Entry Text="{Binding Item.Email}" FontSize="Small" Margin="0" x:Name="EmailEntry">
+                <Entry.Behaviors>
+                    <behaviors:EmailBehavior x:Name="emailBehavior" Ok="{Binding EmailIsValid}" BindingContext="{Binding BindingContext, Source={x:Reference EmailEntry}}" />
+                </Entry.Behaviors>
+                <Entry.Triggers>
+                    <DataTrigger TargetType="Entry"  Binding="{Binding Source={x:Reference emailBehavior},Path=Ok}" Value="False">                       
+                        <Setter Property="TextColor" Value="Red" />
+                    </DataTrigger>
+                    <DataTrigger TargetType="Entry"  Binding="{Binding Source={x:Reference emailBehavior},Path=Ok}" Value="True">
+                        <Setter Property="TextColor" Value="Green" />
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+            
+            <Label Text="Telefono" FontSize="Medium" />
+            <Entry Text="{Binding Item.Phone}" FontSize="Small" />
+            <Label Text="Imagen Url" FontSize="Medium" />
+            <Entry Text="{Binding Item.ProfileImage}" FontSize="Small" />
+            <Label IsVisible="{Binding ShowError}" Text="Los campos * son obligatorios" TextColor="Red" FontSize="Small"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

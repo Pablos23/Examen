@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="197">
+                                <rect key="frame" x="16" y="20" width="343" height="792"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="197" secondAttribute="height" multiplier="187:358" id="y20-tC-fCB"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95686286687850952" green="0.9568626880645752" blue="0.9764704704284668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" id="2lq-YH-jnk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" id="4Le-0S-gur"/>
+                            <constraint firstItem="197" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" id="DuA-lk-hFC"/>
+                            <constraint firstItem="197" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" id="HWj-jI-ZNm"/>
+                            <constraint firstItem="197" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="topMargin" id="Rf8-1V-GfP"/>
+                            <constraint firstItem="197" firstAttribute="leading" secondItem="yd7-JS-zBw" secondAttribute="leadingMargin" id="Yf2-QJ-1SR"/>
+                            <constraint firstItem="9ZL-r4-8FZ" firstAttribute="top" secondItem="197" secondAttribute="bottom" id="Z7y-8g-rkh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" id="aoV-bb-lxf"/>
+                            <constraint firstItem="197" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="topMargin" id="g48-Ki-MMr"/>
+                            <constraint firstItem="197" firstAttribute="top" secondItem="Y8P-hJ-Z43" secondAttribute="bottom" id="oqE-wW-4VF"/>
+                            <constraint firstItem="9ZL-r4-8FZ" firstAttribute="top" secondItem="197" secondAttribute="bottom" id="zCu-ke-yc6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344.9276" y="336.1607"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default.png" width="213" height="378"/>
+    </resources>
+</document>
